@@ -1,0 +1,157 @@
+Test Case 1
+Input:
+"abcdefghijklmnopqrstuvwxyz"
+Output:
+word "abcdefghijklmnopqrstuvwxyz"
+
+Test Case 2
+Input:
+"1234567890"
+Output:
+decimal constant "1234567890"
+
+Test Case 3
+Input:
+"01234567"
+Output:
+octal constant "01234567"
+
+Test Case 4
+Input:
+"0x123456789ABCDEF"
+Output:
+hex constant "0x123456789ABCDEF"
+Test Case 5
+Input:
+"0.125 50.001e-09"
+Output:
+float "0.125"
+float "50.001e-09"
+
+Test Case 6
+Input:
+"+ - * / % ! ~ [ ] ^ < > . | & ( ) ="
+Output:
+addition "+"
+subtraction "-"
+multiplication "*"
+division "/"
+modulo "%"
+negation "!"
+1's complement "~"
+left brace "["
+right brace "]"
+bitwise exclusive or "^"
+less than "<"
+greater than ">"
+structure member "."
+bitwise or "|"
+address "&"
+left parenthesis "("
+right parenthesis ")"
+assignment "="
+
+Test Case 7
+Input:
+"++ -- += -= *= /= %= && || == <= >= << >> &= -> ^= != +- |= >>= <<="
+Output:
+increment "++"
+decrement "--"
+increment assignment "+="
+decrement assignment "-="
+multiplication assignment "*="
+division assignment "/="
+modulo assignment "%="
+logical or "||"
+equals "=="
+less than or equals "<="
+greater than or equals ">="
+shift left "<<"
+shift right ">>"
+bitwise and assignment "&="
+structure pointer "->"
+bitwise xor assignment "^="
+not equals "!="
+plus minus "=-"
+bitwise or assignment "|="
+bitwise right shift assignment ">>="
+bitwise left shift assignment "<<="
+
+Test Case 8
+Input:
+"word 123 0435 0x01C4 5012.24e+12 +=[]+++++-+"
+Output:
+word "word"
+decimal constant "123"
+octal constant "0435"
+hex constant "0x01C4"
+float "5012.24e+12"
+increment assignment "+="
+increment "++"
+increment "++"
+plus minus "+-"
+addition "+"
+
+Test Case 9
+Input:
+"Sometimes+3.14159+baffles-=me as to why it is 325382numbers big"
+Output:
+word "Sometimes"
+addition "+"
+float "3.14159"
+addition "+"
+word "baffles"
+decrement assignment "-="
+word "me"
+word "as"
+word "to"
+word "why"
+word "it"
+word "is"
+decimal constant "325382"
+word "numbers"
+word "big"
+
+Test Case 10
+Input:
+"1.2.3.4.5.6.7.8.9.0"
+Output:
+float "1.2"
+structure member "."
+float "3.4"
+structure member "."
+float "5.6"
+structure member "."
+float "7.8"
+structure member "."
+float "9.0"
+
+Test Case 11
+Input:
+"(+==/%-=--)%!~)["
+Output:
+left parenthesis "("
+increment assignment "+="
+assignment "="
+division "/"
+modulo "%"
+decrement assignment "-="
+decrement "--"
+right parenthesis ")"
+modulo "%"
+negation "!"
+1's complement "~"
+right parenthesis ")"
+left brace "["
+
+Test Case 12
+Input:
+"10. 2.555555 0.123e-10 55.2501e-e 0.1e+-0"
+Output:
+float "10."
+float "2.555555"
+malformed token "[55.2501e-]"
+word "e"
+malformed token "[0.1e+]"
+subtraction "-"
+decimal constant "0"
